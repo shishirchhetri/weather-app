@@ -1,0 +1,1 @@
+get https://api.openweathermap.org/data/2.5/weather?q=kathmandu&units=metric&appid=49c23cc60d61e5d5d19db87bbdd9f9dd
