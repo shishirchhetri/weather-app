@@ -125,7 +125,7 @@ function App() {
       break;
     default:
       icon = "";
-      bh = defaultt;
+      bg = defaultt;
       break;
   }
 
