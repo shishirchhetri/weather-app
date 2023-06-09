@@ -20,14 +20,8 @@ import {
 import { TbTemperatureCelsius } from "react-icons/tb";
 import { ImSpinner8 } from "react-icons/im";
 import { toast } from "react-toastify";
-import cloudyBg from "./assets/cloudy.jpg";
-import rainyBg from "./assets/rainy.jpg";
-import sunnyBg from "./assets/sunny.jpg";
-import thunderBg from "./assets/thunderstorm.jpg";
-import snowyBg from "./assets/snowy.jpg";
+const api = '49c23cc60d61e5d5d19db87bbdd9f9dd';
 
-
-const api = "49c23cc60d61e5d5d19db87bbdd9f9dd";
 function App() {
   const [data, setData] = useState(null);
   const [location, setLocation] = useState("kathmandu");
@@ -139,7 +133,7 @@ function App() {
               <input
                 type="text"
                 placeholder="Enter city name or country"
-                className="flex-1 bg-transparent outline-none placeholder:text-white text-white text-[15px] font-light pl-6 h-full rounded-md"
+                className="flex-1 bg-transparent outline-none text-lg placeholder:text-white text-[15px] font-light pl-6 h-full rounded-md"
                 onChange={(e) => handleSearch(e)}
               />
               <button
