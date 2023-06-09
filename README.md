@@ -9,3 +9,8 @@ Open in your editor then open terminal and run
 ```yarn install```
 
 then finally ```npm run dev```
+
+# some snaps:
+![Alt text](image.png)
+![Alt text](image-1.png)
+

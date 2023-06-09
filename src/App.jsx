@@ -134,7 +134,7 @@ function App() {
   return (
     <div
       className={`h-screen flex justify-center items-center bg-rainyBg bg-cover bg-repeat-none text-white`}
-      style={{backgroundImage : `url(${bg})`}}>
+      style={{backgroundImage : `url(${bg})`, backgroundSize:'cover',backgroundRepeat:'none', backgroundPosition:'center' }}>
       <div className="w-full m-auto  max-w-[550px]">
         <div className="m-4 flex flex-col gapy-2 ">
           <form
