@@ -21,6 +21,15 @@ import { TbTemperatureCelsius } from "react-icons/tb";
 import { ImSpinner8 } from "react-icons/im";
 import { toast } from "react-toastify";
 const api = '49c23cc60d61e5d5d19db87bbdd9f9dd';
+import sunnyBg from './assets/sunny.jpg'
+import rainyBg from './assets/rainy.jpg'
+import snowyBg from './assets/snowy.jpg'
+import thunderBg from './assets/thunderstorm.jpg'
+import cloudyBg from './assets/cloudy.jpg'
+import drizzleBg from './assets/drizzle.jpg'
+import hazeBg from './assets/hazeBg.jpg'
+import defaultt from './assets/default.jpg'
+
 
 function App() {
   const [data, setData] = useState(null);
@@ -69,7 +78,7 @@ function App() {
       }, 2000)
     }).catch((err) => {
       setLoading(false);
-      notifyErr(err);
+      notifyErr(err.message);
     });
   }, [location]);
 
@@ -88,32 +97,35 @@ function App() {
   switch (data.weather[0].main) {
     case "Clouds":
       icon = <IoMdCloudy className="text-[#c6c1c1]" />;
-      bg = "cloudyBg";
+      bg = cloudyBg;
       break;
     case "Rainy":
       icon = <IoMdRainy className="text-[#31cafb"/>;
-      bg = "rainyBg";
+      bg = rainyBg;
       break;
     case "Clear":
       icon = <IoMdSunny className="text-yellow-500" />;
-      bg = "sunnyBg";
+      bg = sunnyBg;
       break;
     case "Haze":
       icon = <BsCloudHaze2Fill />;
+      bg = hazeBg
       break;
     case "Drizzle":
-      icon = <BsCloudDrizzleFill className="text-[#31cafb"/>;
+      icon = <BsCloudDrizzleFill className="text-[#31cafb]"/>;
+      bg = drizzleBg;
       break;
     case "Thunderstorm":
       icon = <IoMdThunderstorm />;
-      bg = "thunderBg";
+      bg = thunderBg;
       break;
     case "Snow":
-      icon = <IoMdSnow className="text-[#31cafb"/>;
-      bg = "snowyBg";
+      icon = <IoMdSnow className="text-[#31cafb]"/>;
+      bg = snowyBg;
       break;
     default:
       icon = "";
+      bh = defaultt;
       break;
   }
 
@@ -121,7 +133,8 @@ function App() {
 
   return (
     <div
-      className={`h-screen flex justify-center items-center bg-rainyBg bg-cover bg-repeat-none text-white`}>
+      className={`h-screen flex justify-center items-center bg-rainyBg bg-cover bg-repeat-none text-white`}
+      style={{backgroundImage : `url(${bg})`}}>
       <div className="w-full m-auto  max-w-[550px]">
         <div className="m-4 flex flex-col gapy-2 ">
           <form
