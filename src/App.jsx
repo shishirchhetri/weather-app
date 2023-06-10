@@ -136,7 +136,7 @@ function App() {
       className={`h-screen flex justify-center items-center bg-rainyBg bg-cover bg-repeat-none text-white`}
       style={{backgroundImage : `url(${bg})`, backgroundSize:'cover',backgroundRepeat:'none', backgroundPosition:'center' }}>
       <div className="w-full m-auto  max-w-[550px]">
-        <div className="m-4 flex flex-col gapy-2 ">
+        <div className="m-2 flex flex-col gap-y-2 ">
           <form
             className={`${
               animate ? "animate-shake" : "animate-none"
@@ -182,20 +182,20 @@ function App() {
 
                 <div className="flex flex-col justify-center items-center">
                   <div className="flex justify-center items-center">
-                    <div className="text-[100px] leading-none font-light">
+                    <div className="text-[80px] leading-none font-light">
                       {parseInt(data.main.temp)}
                     </div>
                     <div className="text-4xl">
                       <TbTemperatureCelsius />
                     </div>
                   </div>
-                  <span className="text-xl capitalize">
+                  <span className="text-xl capitalize font-bold">
                     {data.weather[0].description}
                   </span>
                 </div>
 
-                <div className="flex flex-col gap-y-2">
-                  <div className="flex  justify-between mx-8 font-bold">
+                <div className="flex flex-col gap-y-2 my-2">
+                  <div className="flex  justify-between mx-5 font-bold">
                     <div className="flex items-center gap-x-2">
                       <div className="text-[20px]">
                         <BsEye />
@@ -221,7 +221,7 @@ function App() {
                     </div>
                   </div>
 
-                  <div className="flex justify-between mx-8 font-bold">
+                  <div className="flex justify-between mx-5 font-bold">
                     <div className="flex items-center gap-x-2">
                       <div className="text-[20px]">
                         <BsWater />
